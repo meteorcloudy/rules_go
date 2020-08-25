@@ -144,6 +144,7 @@ import "flag"
 func main() {
 	flag.Parse()
 	Race()
+	blabal()
 }
 
 -- racy_test.go --
