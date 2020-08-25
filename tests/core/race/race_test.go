@@ -261,7 +261,7 @@ func Test(t *testing.T) {
 			if test.cmd == "test" {
 				args = append(args, fmt.Sprintf("--test_arg=-wantrace=%v", test.wantRace))
 			} else if test.cmd == "run" {
-				args = append(args, "--verbose_failures",  "--", fmt.Sprintf("-wantrace=%v", test.wantRace))
+				args = append(args, "--verbose_failures", "-s",  "--", fmt.Sprintf("-wantrace=%v", test.wantRace))
 			}
 			cmd := bazel_testing.BazelCmd(args...)
 			stderr := &bytes.Buffer{}
